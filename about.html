@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>RGBeautiful</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu|Montserrat:200,400|Roboto:100,200,300,400,700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.4.0/css/reinvented-color-wheel.min.css">
+        <link rel="stylesheet" href="./styles.css" />
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            footer {
+                display: flex;
+                margin-top: 0;
+                background: none;
+            }
+        </style>
+    </head>
+    <body>
+
+<!-- ===== LOGO TITLE MENU-BAR ===== -->
+        <header>
+            <div class="header-container">
+                <div class="logo-title-wrapper">
+                    <img class="logo" src="./resources/img/logo/logo-60x60.png" alt="Color wheel">
+                    <a href="./index.html">
+                        <h1 class="title">RGBeautiful</h1>
+                    </a>
+                </div>
+
+                <div class="header__menu-wrapper">
+                    <input type="checkbox" id="toggle"/>
+                    <label for="toggle" class="menu__toggle">
+                        <img class="toggle__open" src="./resources/img/menu-icon-open.svg"/>
+                        <img class="toggle__close" src="./resources/img/menu-icon-close.svg"/>
+                    </label>
+
+                    <div class="menu-items">
+                        <a href="#">Portfolio</a>
+                        <a href="./about.html">About</a>
+                        <a href="./more.html">More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<!-- ===== FOOTER ===== -->
+        <footer>
+            <div class="copyright">
+                <div class="my-info">
+                    <p>&#169;&nbsp<span id="date"></span>&nbsp</p>
+                    <p>bucknerzane@gmail.com</p>
+                    <i title="LinkedIn" class="fab fa-linkedin" alt="Go To LinkedIn Page Button"></i>
+                    <i title="GitHub" class="fab fa-github" alt="Go To GitHub Page Button"></i>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            let year = new Date().getFullYear();
+            document.getElementById('date').textContent = year;
+        </script>
+    </body>
+</html>

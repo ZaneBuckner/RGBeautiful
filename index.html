@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>RGBeautiful</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu|Montserrat:100,200,400,500,700|Roboto:100,200,300,400,700&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.4.0/css/reinvented-color-wheel.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="./resources/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resources/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./resources/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./resources/img/favicon/site.webmanifest" type="image/x-icon">
+        <link rel="stylesheet" href="./styles.css" />
+    </head>
+    <body>
+
+<!-- ===== LOGO TITLE MENU-BAR ===== -->
+        <header>
+            <div class="header-container">
+                <div class="logo-title-wrapper">
+                    <img class="logo" src="./resources/img/logo/logo-60x60.png" alt="Color wheel">
+                    <a href="./index.html">
+                        <h1 class="title">RGBeautiful</h1>
+                    </a>
+                </div>
+
+                <div class="header__menu-wrapper">
+                    <input type="checkbox" id="toggle"/>
+                    <label for="toggle" class="menu__toggle">
+                        <img class="toggle__open" src="./resources/img/menu-icon-open.svg"/>
+                        <img class="toggle__close" src="./resources/img/menu-icon-close.svg"/>
+                    </label>
+
+                    <div class="menu-items">
+                        <a href="#">Portfolio</a>
+                        <a href="./about.html">About</a>
+                        <a href="./more.html">More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+<!-- ===== ACTIONS BAR ===== -->
+        <main class="main-content">
+            <div class="actions-bar style-glass">
+                <i title="Color Picker" id="colorpicker-btn" class="far fa-eye-dropper colorpicker-btn" alt="Color Picker Button"></i>
+                <i title="Random Color" id="random-btn" class="far fa-random random-btn" alt="Random Color b=Button"></i>
+                <div id="color-history"></div>
+            </div>
+<!-- ===== VALUES & BASE COLOR DISPLAY ===== -->
+            <div class="base-color--primary">
+                <div class="color-values style-glass">
+                    <h3 id="name-value">Color Name</h3>
+                    <h3 id="hex-value">#000000</h3>
+                    <h3 id="rgb-value">rgb(255, 255, 255)</h3>
+                    <h3 id="hsl-value">hsl(000, 00%, 00%)</h3>
+                </div>
+            </div>
+        </main>   
+
+
+<!-- ===== ANALOGOUS ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Analogous</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="analogous mod"></div>
+                    <div class="analogous mod"></div>
+                    <div class="base-color--secondary"></div>
+                    <div class="analogous mod"></div>
+                    <div class="analogous mod"></div>
+                </div>
+            </div>
+
+<!-- ===== MONOCHROMATIC ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Monochromatic</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="monochromatic mod"></div>
+                    <div class="monochromatic mod"></div>
+                    <div class="base-color--secondary"></div>
+                    <div class="monochromatic mod"></div>
+                    <div class="monochromatic mod"></div>
+                </div>
+
+            </div>
+
+<!-- ===== COMPLEMENTARY ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Complementary</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="base-color--secondary"></div>
+                    <div class="complementary mod"></div>
+                    <div class="complementary mod"></div>
+                    <div class="complementary mod"></div>
+                    <div class="complementary mod"></div>
+                </div>
+
+            </div>
+
+<!-- ===== SPLIT-COMPLEMENTARY ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Split-Complementary</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="sp-complementary mod"></div>
+                    <div class="sp-complementary mod"></div>
+                    <div class="base-color--secondary"></div>
+                    <div class="sp-complementary mod"></div>
+                    <div class="sp-complementary mod"></div>
+                </div>
+
+            </div>
+
+<!-- ===== TRIADIC ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Triadic</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="base-color--secondary"></div>
+                    <div class="triadic mod"></div>
+                    <div class="triadic mod"></div>                  
+                    <div class="triadic mod"></div>
+                </div>
+
+            </div>
+
+<!-- ===== SQUARE ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Square</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="base-color--secondary"></div>
+                    <div class="square mod"></div>
+                    <div class="square mod"></div>                  
+                    <div class="square mod"></div>
+                </div>
+
+            </div>
+
+<!-- ===== RECTANGLE ===== -->
+            <div class="color-scheme">
+
+                <div class="header">
+                    <div class="sub-title">Rectangle</div>
+                </div>
+
+                <div class="color-palettes">
+                    <div class="base-color--secondary"></div>
+                    <div class="rectangle mod"></div>
+                    <div class="rectangle mod"></div>                  
+                    <div class="rectangle mod"></div>
+                </div>
+
+            </div>
+
+
+<!-- ===== POPUP DRAWER ===== -->
+            <div class="popup-container">
+                <div class="info-popup style-glass--popup">
+                    <i title="Close Drawer" id="close-btn" class="fal fa-times-circle close-btn" alt="Close Drawer Button"></i>
+                    <div class="color-picker"></div>
+                    <div class="popup-btns">
+                        <i title="Save To Recent Colors" class="fal fa-check-circle confirm-btn" alt="Save To Recent Colors Button"></i>
+                        <i class="fal fa-horizontal-rule fa-rotate-90 divider-line"></i>
+                        <i title="Random Color" id="random-btn" class="far fa-random random-btn" alt="Random Color Button"></i>   
+                    </div>
+                    
+                </div>
+            </div>
+
+
+<!-- ===== FOOTER ===== -->
+        <footer>
+            <div class="footer_main">
+                <div class="feedback-wrapper">
+                    <h2>Contact Me</h2>
+<!-- ===== FORM ===== -->
+                    <form id="form" name="feedback" method="POST" data-netlify="true">
+                        <label for="name">
+                            <input type="text" id="name" class="style-mod" name="Name" placeholder="Name">    
+                        </label>
+
+                        <label for="email">
+                            <input type="email" id="email" class="style-mod" name="Email" placeholder="Email *" required>    
+                        </label>
+
+                        <label for="company">
+                            <input type="text" id="company" class="style-mod" name="Company" placeholder="Company">    
+                        </label>
+
+                        <label for="message">
+                            <textarea type="text" name="message" id="message" class="style-mod" cols="20" rows="5" placeholder="Message"></textarea>    
+                        </label>
+<!-- ===== STAR RATING ===== -->
+                        <div class="submit-wrapper">
+                            <fieldset class="rating">
+                                <legend></legend>
+                                    <label aria-label="1 star" title="1 star">
+                                        <i class="fal fa-star"></i>
+                                        <input type="radio" id="rating-1" name="rating" value="1">
+                                    </label>
+
+                                    <label aria-label="2 stars" title="2 stars">
+                                        <i class="fal fa-star"></i>
+                                        <input type="radio" id="rating-2" name="rating" value="2">
+                                    </label>
+
+                                    <label aria-label="3 stars" title="3 stars">
+                                        <i class="fal fa-star"></i>
+                                        <input type="radio" id="rating-3" name="rating" value="3">
+                                    </label>
+
+                                    <label aria-label="4 stars" title="4 stars">
+                                        <i class="fal fa-star"></i>
+                                        <input type="radio" id="rating-4" name="rating" value="4">
+                                    </label>
+
+                                    <label aria-label="5 stars" title="5 stars">
+                                        <i class="fal fa-star"></i>
+                                        <input type="radio" id="rating-5" name="rating" value="5">
+                                    </label>
+                            </fieldset>
+
+                            <input title="Submit Form" type="submit" id="submit" alt="Submit Form Data Button">    
+                        </div>
+
+<!-- ===== RECAPTCHA ===== -->
+                        <div
+                            data-netlify-recaptcha="true"
+                            style="transform:scale(0.70);-webkit-transform:scale(0.70);transform-origin:0 0;-webkit-transform-origin:0 0;margin-top: 10px;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <div class="my-info">
+                    <p>&#169;&nbsp<span id="date"></span>&nbsp</p>
+                    <p>bucknerzane@gmail.com</p>
+                    <i title="LinkedIn" class="fab fa-linkedin" alt="Go To LinkedIn Page Button"></i>
+                    <i title="GitHub" class="fab fa-github" alt="Go To GitHub Page Button"></i>
+                    <i title="Scroll To Top" id="return-top" class="fal fa-angle-double-up" alt="Scroll To Top of Page Button"></i>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/reinvented-color-wheel@0.4.0"></script>
+        <script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js" defer></script>
+        <script type="module" src="./js/utilities-convert.js" defer></script>
+        <script type="module" src="./js/generate-schemes.js" defer></script>
+        <script type="module" src="./js/get-strings.js" defer></script>
+        <script type="module" src="./js/generate-values.js" defer></script>
+        <script type="module" src="./js/main.js" defer></script>
+    </body>
+</html>

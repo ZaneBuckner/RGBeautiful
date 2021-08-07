@@ -1,0 +1,549 @@
+
+/*
+Montserrat | Roboto | Ubuntu | Lora | serif 
+
+blackish: #24282E
+gold: #FFD700
+light-blue: #ADD8E6
+darkish-blue: #1792D2
+*/
+
+
+/* ============= 
+   Global Styles 
+   ============= */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: #24282e;
+}
+
+
+/* ========== 
+   TYPOGRAPHY 
+   ========== */
+h1 {
+    font: 'Montserrat', serif;
+    font-weight: 200;
+    color: #ffc400;
+}
+
+a {
+    font-family: 'Montserrat', serif;
+    text-decoration: none;
+    font-weight: 200;
+    color: #ffc400;
+}
+
+a:hover,
+a:focus {
+    color: rgb(255, 196, 0);
+}
+
+
+/* =========================== 
+   HEADER LOGO, TITLE, NAV BAR 
+   =========================== */
+header {
+    font-family: 'Montserrat', serif;
+    background: #24282E;
+    margin-bottom: 1.5rem;
+}
+
+    .header-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 4%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+        .logo-title-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+            .logo {
+                height: 60px;
+            }
+
+            .title {
+                padding-left: 0.5rem;
+            }
+
+        .menu-items {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto 5px auto;
+            display: none;
+        }
+
+        .menu-items a {
+            text-transform: uppercase;
+        }
+
+        #toggle {
+            display: none;
+        }
+        
+        .toggle__open,
+        .toggle__close {
+            cursor: pointer;
+        }
+
+        .menu__toggle {
+            position: absolute;
+            right: 5%;
+            top: 26px;
+        }
+
+            .toggle__close {
+                display: none;
+            }
+
+            /* When the "checkbox" (hamburger icon) is clicked, display the links */
+            #toggle:checked ~ .menu-items {
+                display: flex;
+            }
+            #toggle:checked ~ .menu__toggle > .toggle__open {
+                display: none;
+            }
+            #toggle:checked ~ .menu__toggle > .toggle__close {
+                display: block;
+            }
+
+
+/* =========== HEADER MEDIA QUERY =========== 
+   For Browser Window Screen Sizes   >= 600px
+   ========================================== */
+@media (min-width: 600px) {
+
+    .header-container {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+        .header__menu-wrapper {
+            margin-left: auto;
+        }
+
+            .menu__toggle {
+                display: none;
+            }
+
+            .menu-items {
+                display: block;
+            }
+
+                .menu-items a {
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding-left: 1.3rem;
+                }
+}
+
+
+/* =========== 
+   Actions Bar 
+   =========== */
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+    .actions-bar {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 0 auto;
+
+        margin-bottom: 12px;
+        width: 100%;
+        padding: 3px 0px 3px 3px;
+        /* touch-action: none; */
+        /* user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none; */
+    }
+
+        .actions-bar .colorpicker-btn,
+        .actions-bar .random-btn {
+            cursor: pointer;
+            font-size: 26px;
+            margin-left: 16px;
+            color: #191B1F;
+        }
+
+    #color-history {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+        .color-item {
+            cursor: pointer;
+            font-size: 28px;
+            margin-right: 12px;
+        }
+
+        #color-history > span:last-child {
+            margin-right: 0;
+        }
+
+
+/* ========================= 
+   Base Color & Info Display 
+   ========================= */
+.style-glass {
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid #0c0c0c36;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 4px 1px rgba(40, 40, 0, 0.20),
+                inset 2px 2px 6px 1px rgba(0,0,0,0.20),
+                3px 0px 30px 0px rgba(69, 70, 69, 0.5);
+    -webkit-box-shadow: inset 2px 2px 4px 1px rgba(40, 40, 0, 0.20),
+                        inset 2px 2px 6px 1px rgba(0,0,0,0.20),
+                        3px 0px 30px 0px rgba(69, 70, 69, 0.5);    
+    -moz-box-shadow:    inset 2px 2px 4px 1px rgba(40, 40, 0, 0.20),
+                        inset 2px 2px 6px 1px rgba(0,0,0,0.20),
+                        3px 0px 30px 0px rgba(69, 70, 69, 0.5);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+}
+
+.base-color--primary {
+    display: flex;
+    height: 130px;
+    width: 100%;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 4px 1px rgba(40, 40, 0, 0.30),
+                inset 2px 2px 6px 1px rgba(0,0,0,0.30);
+    -webkit-box-shadow: inset 2px 2px 4px 1px rgba(40, 40, 0, 0.30),
+                        inset 2px 2px 6px 1px rgba(0,0,0,0.30);    
+    -moz-box-shadow:    inset 2px 2px 4px 1px rgba(40, 40, 0, 0.30),
+                        inset 2px 2px 6px 1px rgba(0,0,0,0.30);
+}
+
+    .color-values {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5px;
+        height: 100%;
+    }
+
+        .color-values > h3 {
+            font-family: 'Montserrat', serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: #24282E;
+            letter-spacing: 1.2px;
+            margin: 0 12px;
+            width: auto;
+        }
+
+
+/* ======== PRIMARY CARD MEDIA QUERY ======== 
+   For Browser Window Screen Sizes   >= 600px 
+   ========================================== */
+@media (min-width: 600px) {
+
+    .actions-bar > .colorpicker-btn {
+        font-size: 24px;
+    }
+
+    .actions-bar > .random-btn {
+        font-size: 24px;
+    }
+    
+        #color-history {
+            margin: 0 auto;
+            
+        }
+        
+            #color-history > span {
+                font-size: 24px;
+            }
+}
+
+
+/* ===================== 
+   COLOR SCHEMES DISPLAY 
+   ===================== */
+.color-scheme {
+    /* border: 1px solid magenta; */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 12px;
+    margin-bottom: 2rem;
+}
+
+    .header {
+        /* border: 1px solid magenta; */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+        .sub-title {
+            font-family: 'Montserrat', serif;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            color: #c4c7cc;
+        }
+
+    .color-palettes {
+        /* border: 1px solid magenta; */
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+        .color-palettes > div {
+            width: 100%;
+            height: 100px;
+        }
+
+        .base-color--secondary {
+            display: none;
+        }
+
+
+/* ======= SECONDARY CARD MEDIA QUERY ======= 
+   For Browser Window Screen Sizes   >= 600px 
+   ========================================== */
+
+@media (min-width: 600px) {
+
+    .base-color--secondary {
+        display: inline-block;
+    }
+
+}
+
+
+/* =====================================
+   POPUP - Color Picker & Shuffle Button
+   ===================================== */
+.popup-container {
+    position: relative;
+}
+
+    .style-glass--popup {
+        background: rgba(228,228,228,0.50);
+        box-shadow: 3px 0px 6px 0px rgba(65, 65, 65, 0.7);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border-radius: 10px;
+        border: 1px solid #5858588a;
+    }
+
+    .info-popup {
+        position: fixed;
+        z-index: 10;
+        bottom: 0px;
+        right: 0px;
+        padding: 10px;
+        display: none;
+    }
+
+        .close-btn {
+            cursor: pointer;
+            position: absolute;
+            font-size: 28px;
+            top: 5px;
+            left: 5px;
+        }
+
+        .color-picker {
+            margin-top: 15px;
+        }
+
+        .popup-btns {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 12px auto;
+        }
+
+            .popup-btns > .confirm-btn {
+                cursor: pointer;
+                /* flex: 2; */
+                /* margin: auto; */
+                font-size: 40px;
+                /* touch-action: none; */
+            }
+
+            .popup-btns > .divider-line {
+                /* flex: 1; */
+                /* margin: auto; */
+                /* margin: 0 10px; */
+                font-size: 30px;
+                opacity: 25%;
+            }
+
+            .popup-btns > .random-btn {
+                cursor: pointer;
+                /* flex: 2; */
+                /* margin: auto; */
+                font-size: 40px;
+                /* touch-action: none; */
+            }
+
+
+/* ======
+   FOOTER
+   ====== */
+footer {
+    font-family: 'Montserrat', serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px;
+    background: #111111;
+}
+
+.footer_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10% 12px 10%;
+}
+
+    .feedback-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .feedback-wrapper h2 {
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        #form .style-mod {
+            font-family: 'Montserrat', serif;
+            font-size: 14px;
+            color: white;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 4px;
+            background: none;
+            border-radius: 5px;
+            border-style: none;
+            border: 1px solid rgba(196, 199, 204, 0.25);
+        }
+
+        #form input:focus {
+            outline: none;
+            border: 1px solid rgba(255, 196, 0, 0.40);
+        }
+
+        #form textarea {
+            resize: none;
+        }
+
+        #form textarea:focus {
+            outline: none;
+            border: 1px solid rgba(255, 196, 0, 0.40);
+        }
+
+        #form input[type="radio"] {
+            position: fixed;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .submit-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+            width: 90%;
+        }
+
+            .submit-wrapper .rating {
+                flex: 3;
+                border: none;
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+                .fa-star {
+                    cursor: pointer;
+                    font-size: 24px;
+                    color: rgba(255, 255, 255, 0.70);
+                    /* padding: 1px; */
+                }
+
+                .fa-star:hover {
+                    color: rgb(255, 196, 0);
+                }
+
+                .submit-wrapper .fas {
+                    color: rgb(255, 196, 0);
+                }
+
+            #submit {
+                flex: 2;
+                cursor: pointer;
+                font-family: 'Montserrat', serif;
+                font-size: 14px;
+                color: white;
+                width: 100%;
+                height: 25px;
+                background: none;
+                border-radius: 5px;
+                border-style: none;
+                border: 1px solid rgba(196, 199, 204, 0.25);
+                margin-left: 10px;
+            }
+
+                #submit:hover {
+                    border: 1px solid rgba(255, 196, 0, 0.50);
+                }
+
+.copyright {
+    display: flex;
+}
+
+    .copyright p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.70);
+        /* padding: 0 5px; */
+    }
+
+    .copyright > #return-top {
+        cursor: pointer;
+        position: relative;
+        color: rgb(255, 196, 0);
+        font-size: 20px;
+        margin-left: 12px;
+    }
+
+    .my-info {
+        display: flex;
+        align-items: baseline;
+    }
+
+        .my-info i {
+            cursor: pointer;
+            margin-left: 16px;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.70);
+        }
