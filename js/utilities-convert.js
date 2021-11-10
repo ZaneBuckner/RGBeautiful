@@ -33,25 +33,3 @@ export const allowRapidClicks = () => {
         }
     });
 };
-
-
-/**
- * Converts HEX string to RGB array
- * @param hex string
- * @returns RGB array
- */
-// export const hexToRgb = (hex) => {
-//     const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
-//     let result = [];
-//     let parsedHex = hex.slice(1, 7).split('').map(value => parseInt(value, 16));
-//     let multiHex = parsedHex.map((value, i) => {
-//         if (i % 2 === 0) { return value * 16; }
-//         return value;
-//     });
-
-//     result.push(multiHex[0] + multiHex[1]);
-//     result.push(multiHex[2] + multiHex[3]);
-//     result.push(multiHex[4] + multiHex[5]);
-
-//     return result;
-// }
