@@ -30,6 +30,12 @@ Designed mobile first.
 Learned how to use media queries to accommodate various screen sizes.
 ```
 
+#### IMAGES & ICONS
+[Color Wheel Flower Site Logo](https://www.cleanpng.com/png-color-wheel-interior-design-services-color-theory-845125)<br>
+
 #### LIBARIES
 [Reinvented Color Wheel](https://github.com/luncheon/reinvented-color-wheel)<br>
-<a href="https://github.com/luncheon/reinvented-color-wheel"><img src="https://img.shields.io/static/v1?label=luncheon&message=Reinvented Color Wheel&color=blue&logo=github" alt="micku7zu - vanilla-tilt.js"></a>
+<a href="https://github.com/luncheon/reinvented-color-wheel"><img src="https://img.shields.io/static/v1?label=luncheon&message=Reinvented Color Wheel&color=blue&logo=github" alt="micku7zu - vanilla-tilt.js"></a><br>
+
+#### UTILITY SITES
+[Favicon Generator](https://realfavicongenerator.net/)<br>
